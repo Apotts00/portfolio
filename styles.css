@@ -74,6 +74,20 @@ nav a:hover {
   margin-bottom: 30px;
 }
 
+#education ul {
+  list-style-type: square;
+  padding-left: 20px;
+}
+
+#education li {
+  margin-bottom: 10px;
+}
+
+#education h3 {
+  color: #e4a4bd;
+  margin-top: 20px;
+}
+
 /* Projects */
 .projects {
   display: grid;
