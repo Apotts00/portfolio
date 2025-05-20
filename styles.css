@@ -1,10 +1,10 @@
-/* Background image setup */
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
   background: url('images/aloveport.png') no-repeat center center fixed;
   background-size: cover;
   color: #e4dbc2;
+  scroll-behavior: smooth;
   position: relative;
   z-index: 0;
 }
@@ -14,11 +14,10 @@ body::before {
   position: fixed;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background-color: rgba(0, 0, 0, 0.85); /* dark overlay */
+  background-color: rgba(0, 0, 0, 0.85);
   z-index: -1;
 }
 
-/* Header and Navigation */
 header {
   background: transparent;
   padding: 30px 20px;
@@ -64,31 +63,15 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* Sections */
 .container {
   max-width: 900px;
   margin: auto;
   padding: 40px 20px;
-  background-color: rgba(0, 0, 0, 0.7); /* adds contrast over background */
+  background-color: rgba(0, 0, 0, 0.7);
   border-radius: 12px;
   margin-bottom: 30px;
 }
 
-#education ul {
-  list-style-type: square;
-  padding-left: 20px;
-}
-
-#education li {
-  margin-bottom: 10px;
-}
-
-#education h3 {
-  color: #e4a4bd;
-  margin-top: 20px;
-}
-
-/* Projects */
 .projects {
   display: grid;
   gap: 20px;
@@ -117,7 +100,45 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* Resume and Contact */
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.edu-card {
+  background-color: #111;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  border: 1px solid #333;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.05);
+}
+
+.edu-card img {
+  height: 60px;
+  margin-bottom: 15px;
+  object-fit: contain;
+}
+
+.edu-card h3 {
+  color: #e4a4bd;
+  margin: 10px 0 5px;
+}
+
+.edu-card a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #e4a4bd;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.edu-card a:hover {
+  color: #e4dbc2;
+  text-decoration: underline;
+}
+
 .contact a {
   color: #e4a4bd;
   font-weight: bold;
