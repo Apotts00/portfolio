@@ -1,0 +1,87 @@
+/* Base styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background-color: #fdfdfd;
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+header, footer {
+  background-color: #004d66;
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+  padding: 40px 0;
+}
+
+h2 {
+  color: #004d66;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.project-card h3 {
+  margin-top: 0;
+  font-size: 1.2rem;
+}
+
+.project-card a {
+  color: #004d66;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.project-card a:hover {
+  color: #00aaff;
+}
+
+.contact a {
+  color: #004d66;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact a:hover {
+  color: #00aaff;
+}
+
+footer {
+  font-size: 0.9rem;
+}
