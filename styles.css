@@ -1,157 +1,532 @@
+/* --------- Base --------- */
+
+:root {
+  --bg: #12070c;
+  --bg-alt: #1b1018;
+  --card-bg: #201421;
+  --accent: #e1c47a;
+  --accent-soft: rgba(225, 196, 122, 0.15);
+  --text-main: #f6f1e7;
+  --text-muted: #d0c4b5;
+  --border-subtle: rgba(255, 255, 255, 0.12);
+  --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.6);
+  --radius-lg: 18px;
+  --radius-md: 12px;
+  --max-width: 1100px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
 body {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: url('images/aloveport.png') no-repeat center center fixed;
-  background-size: cover;
-  color: #e4dbc2;
+  padding: 0;
+  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top left, #231322 0, #050307 55%);
+  color: var(--text-main);
   scroll-behavior: smooth;
+}
+
+/* --------- Layout Helpers --------- */
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section {
+  padding: 3.5rem 0;
+}
+
+.section-alt {
+  padding: 3.5rem 0;
+  background: radial-gradient(circle at top, #231322 0, #12070c 60%);
+}
+
+.section h2 {
+  margin: 0 0 2rem;
+  font-family: "Playfair Display", Georgia, serif;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  color: var(--accent);
+}
+
+/* --------- Hero / Header --------- */
+
+.hero {
   position: relative;
-  z-index: 0;
+  padding: 1.5rem 0 4rem;
+  background: radial-gradient(circle at top left, #3a1824 0, #050307 60%);
+  box-shadow: 0 18px 55px rgba(0, 0, 0, 0.7);
+  z-index: 1;
 }
 
-body::before {
-  content: '';
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background-color: rgba(0, 0, 0, 0.85);
-  z-index: -1;
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at top left, rgba(225, 196, 122, 0.18) 0, transparent 55%),
+    radial-gradient(circle at bottom right, rgba(214, 138, 147, 0.18) 0, transparent 60%);
+  opacity: 0.9;
+  pointer-events: none;
 }
 
-header {
-  background: transparent;
-  padding: 30px 20px;
-  text-align: center;
+.hero-inner {
+  position: relative;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
 }
 
-.header-content {
+.hero-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+/* Brand */
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.logo-mark {
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  border: 1px solid var(--accent);
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-name {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.brand-role {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+/* Nav */
+
+.main-nav {
+  display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  justify-content: flex-end;
+  gap: 1rem;
+  font-size: 0.9rem;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: var(--text-muted);
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.78rem;
+}
+
+.main-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.25rem;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.18s ease-out;
+}
+
+.main-nav a:hover {
+  color: var(--text-main);
+}
+
+.main-nav a:hover::after {
+  width: 100%;
+}
+
+/* Hero Content */
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
 }
 
 .profile-pic {
-  width: 120px;
-  height: 120px;
-  border-radius: 100px;
+  width: 130px;
+  height: 130px;
+  border-radius: 999px;
   object-fit: cover;
-  border: 3px solid #e4a4bd;
+  border: 3px solid var(--accent);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.7);
 }
 
-header h1 {
-  margin: 0;
-  font-size: 2rem;
-  color: #e4a4bd;
+.hero-text {
+  max-width: 560px;
 }
 
-header p {
-  margin: 10px 0;
-  color: #e4dbc2;
+.hero-name {
+  display: block;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(2.3rem, 4vw, 2.8rem);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
 }
 
-nav a {
-  margin: 0 15px;
-  color: #e4a4bd;
-  font-weight: bold;
+.hero-title {
+  display: block;
+  margin-top: 0.4rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+}
+
+.hero-tagline {
+  margin-top: 1.2rem;
+  color: var(--text-muted);
+  font-size: 0.98rem;
+  max-width: 34rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1.8rem;
+}
+
+/* --------- Buttons --------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.4rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 500;
   text-decoration: none;
+  cursor: pointer;
+  transition: all 0.15s ease-out;
 }
 
-nav a:hover {
-  color: #e4dbc2;
-  text-decoration: underline;
+.btn-primary {
+  background: var(--accent);
+  color: #28140c;
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.7);
 }
 
-.container {
-  max-width: 900px;
-  margin: auto;
-  padding: 40px 20px;
-  background-color: rgba(0, 0, 0, 0.7);
-  border-radius: 12px;
-  margin-bottom: 30px;
+.btn-primary:hover {
+  background: #f1d98c;
+  transform: translateY(-1px);
 }
+
+.btn-outline {
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  background: transparent;
+}
+
+.btn-outline:hover {
+  background: var(--accent-soft);
+  transform: translateY(-1px);
+}
+
+/* --------- About --------- */
+
+.two-column {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  gap: 2.5rem;
+}
+
+.section p {
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+  font-size: 0.96rem;
+}
+
+.info-card {
+  background: var(--card-bg);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-subtle);
+  padding: 1.3rem 1.4rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.info-card h3 {
+  margin: 0 0 0.7rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.info-card ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 1rem;
+}
+
+.info-card li {
+  position: relative;
+  margin-bottom: 0.5rem;
+  color: var(--text-muted);
+  font-size: 0.92rem;
+}
+
+.info-card li::before {
+  content: "•";
+  position: absolute;
+  left: -0.8rem;
+  color: var(--accent);
+}
+
+/* --------- Cards (What I Offer) --------- */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+  padding: 1.4rem 1.4rem 1.2rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.card h3 {
+  margin: 0 0 0.7rem;
+  font-size: 1rem;
+}
+
+.card p {
+  font-size: 0.94rem;
+  margin-bottom: 0.6rem;
+}
+
+.card ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.card li {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.availability {
+  margin-top: 2rem;
+  font-size: 0.92rem;
+  color: var(--text-muted);
+}
+
+/* --------- Projects --------- */
 
 .projects {
   display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 }
 
 .project-card {
-  background-color: #111;
-  border: 1px solid #333;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 0 5px rgba(255, 255, 255, 0.05);
+  background: var(--card-bg);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-subtle);
+  padding: 1.4rem 1.5rem 1.2rem;
+  box-shadow: var(--shadow-soft);
 }
 
 .project-card h3 {
-  color: #e4a4bd;
+  margin: 0 0 0.4rem;
+  color: var(--accent);
 }
 
-.project-card a {
-  color: #e4a4bd;
+.project-sub {
+  margin: 0 0 0.9rem;
+  font-size: 0.86rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--text-muted);
+}
+
+.project-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.1rem;
+  margin-bottom: 0.9rem;
+}
+
+.project-detail-grid h4 {
+  margin: 0 0 0.3rem;
+  font-size: 0.86rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.project-detail-grid p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.project-links a {
+  color: var(--accent);
   text-decoration: none;
+  font-size: 0.9rem;
 }
 
-.project-card a:hover {
-  color: #e4dbc2;
+.project-links a:hover {
   text-decoration: underline;
+  color: #f1d98c;
 }
+
+/* --------- Education --------- */
 
 .education-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.4rem;
 }
 
 .edu-card {
-  background-color: #111;
-  padding: 20px;
-  border-radius: 10px;
+  background: var(--card-bg);
+  border-radius: var(--radius-md);
+  padding: 1.4rem 1.2rem;
   text-align: center;
-  border: 1px solid #333;
-  box-shadow: 0 0 5px rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-soft);
 }
 
 .edu-card img {
-  height: 60px;
-  margin-bottom: 15px;
+  height: 55px;
+  margin-bottom: 0.8rem;
   object-fit: contain;
 }
 
 .edu-card h3 {
-  color: #e4a4bd;
-  margin: 10px 0 5px;
+  margin: 0 0 0.4rem;
+  color: var(--accent);
+  font-size: 1rem;
+}
+
+.edu-card p {
+  margin: 0.2rem 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
 }
 
 .edu-card a {
-  display: inline-block;
-  margin-top: 10px;
-  color: #e4a4bd;
+  color: var(--accent);
+  font-weight: 500;
   text-decoration: none;
-  font-weight: bold;
 }
 
 .edu-card a:hover {
-  color: #e4dbc2;
   text-decoration: underline;
 }
 
+/* --------- Contact --------- */
+
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
 .contact a {
-  color: #e4a4bd;
-  font-weight: bold;
+  color: var(--accent);
   text-decoration: none;
+  font-weight: 500;
 }
 
 .contact a:hover {
-  color: #e4dbc2;
+  color: #f1d98c;
+  text-decoration: underline;
 }
 
-footer {
+.contact-links p {
+  margin: 0.2rem 0;
+}
+
+/* --------- Footer --------- */
+
+.site-footer {
   text-align: center;
-  padding: 20px;
-  color: #aaa;
-  background-color: transparent;
+  padding: 1.5rem 0 2rem;
+  font-size: 0.84rem;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border-subtle);
+  background: #050307;
+}
+
+/* --------- Responsive --------- */
+
+@media (max-width: 900px) {
+  .two-column {
+    grid-template-columns: 1fr;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .project-detail-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .hero-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .main-nav {
+    justify-content: flex-start;
+  }
+
+  .hero-title {
+    letter-spacing: 0.16em;
+  }
 }
