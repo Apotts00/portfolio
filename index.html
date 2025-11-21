@@ -3,117 +3,274 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Adrienne Love | Web Developer Portfolio</title>
+  <title>Adrienne Love | Technical Project Manager</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Optional: replace "yourkitid" with your real Font Awesome kit or remove this -->
   <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-  <header>
-    <h1>Adrienne Love</h1>
-    <div class="header-content">
-      <img src="images/aloveport.png" alt="Adrienne Love headshot" class="profile-pic" />
-      <div>
-        <p>Full-Stack Web Developer 💻 | Code + Creativity</p>
-        <nav>
+  <!-- HEADER / HERO -->
+  <header class="hero">
+    <div class="hero-overlay"></div>
+
+    <div class="hero-inner">
+      <div class="hero-top">
+        <div class="brand">
+          <div class="logo-mark">AL</div>
+          <div class="brand-text">
+            <span class="brand-name">Adrienne Love</span>
+            <span class="brand-role">Technical Project Manager</span>
+          </div>
+        </div>
+
+        <nav class="main-nav">
           <a href="#about">About</a>
+          <a href="#offer">What I Offer</a>
           <a href="#projects">Projects</a>
           <a href="#education">Education</a>
           <a href="#resume">Resume</a>
           <a href="#contact">Contact</a>
         </nav>
       </div>
+
+      <div class="hero-content">
+        <img src="images/aloveport.png" alt="Adrienne Love headshot" class="profile-pic" />
+
+        <div class="hero-text">
+          <h1>
+            <span class="hero-name">Adrienne Love</span>
+            <span class="hero-title">Technical Project Manager</span>
+          </h1>
+          <p class="hero-tagline">
+            Delivering system rollouts & workflow optimization for remote teams by
+            bridging technology, people, and operations.
+          </p>
+
+          <div class="hero-actions">
+            <!-- Update this href if your resume file path is different -->
+            <a href="files/aloveresume.pdf" class="btn btn-primary" target="_blank" rel="noopener">
+              Download Resume
+            </a>
+            <a href="https://linkedin.com/in/adrienneplove" class="btn btn-outline" target="_blank" rel="noopener">
+              View LinkedIn
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   </header>
 
-  <section id="about" class="container">
-    <h2>About Me</h2>
-    <p>Hi, I'm Adrienne! A recent A.A.S. Web Development grad with experience in full-stack technologies like HTML, CSS, JavaScript, React, Node.js, Python, and SQL. With a strong foundation in admin and finance, I bring unique problem-solving to tech. I love building user-friendly solutions and learning new tools!</p>
-  </section>
-
-  <section id="projects" class="container">
-    <h2>Projects</h2>
-    <div class="projects">
-      <div class="project-card">
-        <h3>📝 Task Tracker App</h3>
-        <p>A React + Node.js to-do app with MongoDB backend.</p>
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="container two-column">
+      <div>
+        <h2>About</h2>
         <p>
-          <a href="https://github.com/Apotts00/mern-todo-app/" target="_blank">GitHub</a> | 
-          <a href="https://frontend-9xp1.onrender.com/" target="_blank">Live Demo</a>
+          I am a Technical Project Manager with a strong background in system rollouts,
+          workflow optimization, and cross-functional coordination. I bring hands-on
+          experience from education, logistics, banking, and real estate—backed by an
+          A.A.S. in Full-Stack Programming.
+        </p>
+        <p>
+          From implementing platforms like Red Rover for 60+ staff to improving loading
+          workflows at UPS, I specialize in creating structure, simplifying complex
+          processes, and guiding teams through change with clarity and calm.
         </p>
       </div>
 
-      <div class="project-card">
-        <h3>📅 Event Hive</h3>
-        <p>Plan events, share checklists, and collaborate — full-stack MERN.</p>
-        <p>
-          <a href="https://github.com/Apotts00/web215/tree/main/eventhive/eventhive-backend" target="_blank">GitHub</a> | 
-          <a href="https://eventhive-frontend.onrender.com" target="_blank">Live Demo</a>
-        </p>
+      <div class="info-card">
+        <h3>Snapshot</h3>
+        <ul>
+          <li>System rollout & technical support for 60+ users</li>
+          <li>Experience across K–12 operations, logistics & financial services</li>
+          <li>Full-stack foundation: React, Node.js, Python, SQL</li>
+          <li>Founder of mentorship & scholarship programs</li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <section id="education" class="container">
-    <h2>Education & Certifications</h2>
-    <div class="education-grid">
+  <!-- WHAT I OFFER -->
+  <section id="offer" class="section section-alt">
+    <div class="container">
+      <h2>What I Offer</h2>
 
-      <div class="edu-card">
-        <img src="images/cpcc-logo.png" alt="CPCC logo" />
-        <h3>A.A.S. in Full-Stack Programming</h3>
-        <p>Central Piedmont Community College, 2025</p>
+      <div class="cards">
+        <article class="card">
+          <h3>Software & System Implementations</h3>
+          <p>
+            Lead end-to-end rollouts—from planning and onboarding to training,
+            documentation, and support—for tools that teams rely on every day.
+          </p>
+          <ul>
+            <li>Red Rover scheduling & payroll implementation for 60+ staff</li>
+            <li>Daily technical support, troubleshooting & workflow refinement</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Process & Workflow Optimization</h3>
+          <p>
+            Identify bottlenecks and redesign workflows to improve accuracy, speed, and
+            team productivity across operations.
+          </p>
+          <ul>
+            <li>Introduced optimized loading methods and training at UPS</li>
+            <li>Improved payroll and reporting accuracy at CMS</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Cross-Functional Coordination</h3>
+          <p>
+            Align leadership, staff, and technical teams to ensure clear expectations,
+            timelines, and outcomes.
+          </p>
+          <ul>
+            <li>Background in banking, logistics, education & real estate</li>
+            <li>Strong communication, training & relationship-building skills</li>
+          </ul>
+        </article>
       </div>
 
-      <div class="edu-card">
-        <img src="images/cpcc-logo.png" alt="CPCC logo" />
-        <h3>Front-End Development Fundamentals</h3>
-        <p>Issued Dec 2024 – <a href="https://www.parchment.com/u/award/fa7f8bb8ae56f4fc1bc287106d190b8b" target="_blank">View Certificate</a></p>
-      </div>
-
-      <div class="edu-card">
-        <img src="images/cpcc-logo.png" alt="CPCC logo" />
-        <h3>Information Technology Fundamentals</h3>
-        <p>Issued May 2024 – <a href="https://www.parchment.com/u/award/85a24ceea86bcf6c2fec68043fb336b5" target="_blank">View Certificate</a></p>
-      </div>
-
-      <div class="edu-card">
-        <img src="images/cpcc-logo.png" alt="CPCC logo" />
-        <h3>Information Technology – Python</h3>
-        <p>Expected May 2025</p>
-      </div>
-
-      <div class="edu-card">
-        <img src="images/fcc-logo.png" alt="freeCodeCamp logo" />
-        <h3>JavaScript Algorithms & Data Structures</h3>
-        <p>Issued Nov 2024 – <a href="https://www.freecodecamp.org/certification/apotts00/javascript-algorithms-and-data-structures-v8" target="_blank">View Certificate</a></p>
-      </div>
-
-      <div class="edu-card">
-        <img src="images/fcc-logo.png" alt="freeCodeCamp logo" />
-        <h3>Responsive Web Design</h3>
-        <p>Issued Nov 2024 – <a href="https://www.freecodecamp.org/certification/apotts00/responsive-web-design" target="_blank">View Certificate</a></p>
-      </div>
-
+      <p class="availability">
+        <strong>Currently open to:</strong> Remote U.S.-based Technical Project Manager,
+        IT Project Coordinator, and Implementation roles.
+      </p>
     </div>
   </section>
 
-  <section id="resume" class="container">
-    <h2>Resume</h2>
-    <p><a href="files/aloveresume.pdf" download>📄 Download My Resume (PDF)</a></p>
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2>Selected Projects</h2>
+
+      <div class="projects">
+        <article class="project-card">
+          <h3>📝 Task Tracker App</h3>
+          <p class="project-sub">Full-Stack Task Management Solution (React • Node • MongoDB)</p>
+          <div class="project-detail-grid">
+            <div>
+              <h4>Problem</h4>
+              <p>Teams needed a simple way to track tasks and stay aligned without relying on scattered tools.</p>
+            </div>
+            <div>
+              <h4>Action</h4>
+              <p>Designed and built a MERN-based task tracker with CRUD features, filtering, and persistent storage.</p>
+            </div>
+            <div>
+              <h4>Outcome</h4>
+              <p>Created a unified place to manage tasks and priorities, demonstrating full lifecycle delivery from concept to deployment.</p>
+            </div>
+          </div>
+          <p class="project-links">
+            <a href="https://github.com/Apotts00/mern-todo-app/" target="_blank" rel="noopener">GitHub</a> ·
+            <a href="https://frontend-9xp1.onrender.com/" target="_blank" rel="noopener">Live Demo</a>
+          </p>
+        </article>
+
+        <article class="project-card">
+          <h3>📅 Event Hive</h3>
+          <p class="project-sub">Event Planning & Collaboration Platform (MERN Stack)</p>
+          <div class="project-detail-grid">
+            <div>
+              <h4>Problem</h4>
+              <p>Event planners were juggling checklists, inspiration, and collaboration across multiple tools.</p>
+            </div>
+            <div>
+              <h4>Action</h4>
+              <p>Built a full-stack MERN application where planners can create events, manage checklists, and collaborate in one place.</p>
+            </div>
+            <div>
+              <h4>Outcome</h4>
+              <p>Reduced planning friction and centralised event info, highlighting my ability to manage technical projects end-to-end.</p>
+            </div>
+          </div>
+          <p class="project-links">
+            <a href="https://github.com/Apotts00/web215/tree/main/eventhive/eventhive-backend" target="_blank" rel="noopener">GitHub</a> ·
+            <a href="https://eventhive-frontend.onrender.com" target="_blank" rel="noopener">Live Demo</a>
+          </p>
+        </article>
+      </div>
+    </div>
   </section>
 
-  <section id="contact" class="container contact">
-    <h2>Contact</h2>
-    <p><i class="fas fa-envelope"></i> <a href="mailto:apotts002@gmail.com">apotts002@gmail.com</a></p>
-    <p><i class="fab fa-github"></i> <a href="https://github.com/Apotts00" target="_blank">GitHub</a></p>
-    <p><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/adrienneplove" target="_blank">LinkedIn</a></p>
+  <!-- EDUCATION -->
+  <section id="education" class="section section-alt">
+    <div class="container">
+      <h2>Education & Certifications</h2>
+      <div class="education-grid">
+
+        <div class="edu-card">
+          <img src="images/cpcc-logo.png" alt="CPCC logo" />
+          <h3>A.A.S. in Full-Stack Programming</h3>
+          <p>Central Piedmont Community College, 2025</p>
+        </div>
+
+        <div class="edu-card">
+          <img src="images/cpcc-logo.png" alt="CPCC logo" />
+          <h3>Front-End Development Fundamentals</h3>
+          <p>Issued Dec 2024 – <a href="https://www.parchment.com/u/award/fa7f8bb8ae56f4fc1bc287106d190b8b" target="_blank" rel="noopener">View Certificate</a></p>
+        </div>
+
+        <div class="edu-card">
+          <img src="images/cpcc-logo.png" alt="CPCC logo" />
+          <h3>Information Technology Fundamentals</h3>
+          <p>Issued May 2024 – <a href="https://www.parchment.com/u/award/85a24ceea86bcf6c2fec68043fb336b5" target="_blank" rel="noopener">View Certificate</a></p>
+        </div>
+
+        <div class="edu-card">
+          <img src="images/cpcc-logo.png" alt="CPCC logo" />
+          <h3>Information Technology – Python</h3>
+          <p>Expected May 2025</p>
+        </div>
+
+        <div class="edu-card">
+          <img src="images/fcc-logo.png" alt="freeCodeCamp logo" />
+          <h3>JavaScript Algorithms & Data Structures</h3>
+          <p>Issued Nov 2024 – <a href="https://www.freecodecamp.org/certification/apotts00/javascript-algorithms-and-data-structures-v8" target="_blank" rel="noopener">View Certificate</a></p>
+        </div>
+
+        <div class="edu-card">
+          <img src="images/fcc-logo.png" alt="freeCodeCamp logo" />
+          <h3>Responsive Web Design</h3>
+          <p>Issued Nov 2024 – <a href="https://www.freecodecamp.org/certification/apotts00/responsive-web-design" target="_blank" rel="noopener">View Certificate</a></p>
+        </div>
+
+      </div>
+    </div>
   </section>
 
-  <footer>
-    <p>© 2025 Adrienne Love. Made with ❤️.</p>
-  </footer>
+  <!-- RESUME -->
+  <section id="resume" class="section">
+    <div class="container">
+      <h2>Resume</h2>
+      <p>
+        <a href="files/aloveresume.pdf" class="btn btn-primary" target="_blank" rel="noopener">
+          📄 Download My Resume (PDF)
+        </a>
+      </p>
+    </div>
+  </section>
 
-</body>
-</html>
+  <!-- CONTACT -->
+  <section id="contact" class="section section-alt">
+    <div class="container contact">
+      <div>
+        <h2>Contact</h2>
+        <p>If you’re looking for a Technical Project Manager who can bridge technology, operations, and people, I’d love to connect.</p>
+        <p><i class="fas fa-envelope"></i> <a href="mailto:apotts002@gmail.com">apotts002@gmail.com</a></p>
+      </div>
+      <div class="contact-links">
+        <p><i class="fab fa-github"></i> <a href="https://github.com/Apotts00" target="_blank" rel="noopener">GitHub</a></p>
+        <p><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/adrienneplove" target="_blank" rel="noopener">LinkedIn</a></p>
+      </div>
+    </div>
+  <
+
 
