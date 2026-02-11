@@ -57,6 +57,22 @@ body {
   color: var(--accent);
 }
 
+.section-intro {
+  margin: -1.2rem 0 1.8rem;           /* pulls it closer to the H2, adds space below */
+  max-width: 52rem;
+  color: var(--text-muted);
+  font-size: 0.96rem;
+  line-height: 1.7;
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 720px) {
+  .section-intro {
+    margin: -1rem 0 1.4rem;
+    font-size: 0.94rem;
+  }
+}
+
 /* --------- Hero / Header --------- */
 
 .hero {
